@@ -39,5 +39,35 @@ int main(void) {
   }
 }
 
+float mc_pi(int n){
+	int count1=0;
+	int count2=0;		
+	float x,y,a,b,c;
+	float dist;
+	float r = 1;
+	for(int i=1;i<n;i++){
+
+	
+	x = frandom();
+	y = frandom();
+	a = x*x;
+	b = y*y;
+	c = a+b;
+	dist = sqrtf(c);
+	
+	if(dist>r){
+		count1++;
+	}else{
+		count2++;
+	}
+		}
+	
+	int count3;
+	count3=count1+count2;
+	float pi;
+	pi = (4*(float)count2)/(float)count3;
+	return pi;	}
+
+
 
 
